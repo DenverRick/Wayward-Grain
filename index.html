@@ -561,6 +561,44 @@
       line-height: 1.6;
     }
 
+    /* ─── FAQ ─── */
+    .faq {
+      padding: 6rem 6vw;
+      background: var(--deep);
+    }
+    .faq-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem 6vw;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .faq-item {}
+    .faq-question {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-weight: 400;
+      color: var(--linen);
+      margin-bottom: 0.6rem;
+    }
+    .faq-answer {
+      font-size: 0.85rem;
+      color: var(--ash);
+      line-height: 1.9;
+    }
+    .faq-divider {
+      width: 24px; height: 1px;
+      background: var(--amber);
+      margin-bottom: 0.9rem;
+    }
+    @media (max-width: 860px) {
+      .faq-grid { grid-template-columns: 1fr; }
+    }
+
     /* ─── FOOTER ─── */
     footer {
       padding: 3rem 6vw;
@@ -928,6 +966,53 @@
 
       <button type="submit" class="form-submit">Send Inquiry →</button>
     </form>
+  </section>
+
+  <!-- ─── FAQ ─── -->
+  <section class="faq" id="faq">
+    <div class="faq-header fade-up">
+      <p class="section-label">Common Questions</p>
+      <h2 class="section-title">Before You <em>Reach Out</em></h2>
+    </div>
+    <div class="faq-grid">
+
+      <div class="faq-item fade-up">
+        <div class="faq-divider"></div>
+        <p class="faq-question">Do you ship nationwide?</p>
+        <p class="faq-answer">Yes. White-glove delivery and installation is available throughout the Denver metro area. For clients outside Colorado, all pieces are professionally crated and shipped via fine-art freight carriers — fully insured, door to door.</p>
+      </div>
+
+      <div class="faq-item fade-up">
+        <div class="faq-divider"></div>
+        <p class="faq-question">Where do your slabs come from?</p>
+        <p class="faq-answer">Slabs are sourced from regional sawyers, estate timber, and a small network of sustainable suppliers across the Rocky Mountain West and upper Midwest. Every slab is hand-selected by Jason for figure, character, and structural integrity.</p>
+      </div>
+
+      <div class="faq-item fade-up">
+        <div class="faq-divider"></div>
+        <p class="faq-question">What types of furniture do you make?</p>
+        <p class="faq-answer">Wayward Grain specializes in live-edge and bookend dining tables, river tables, coffee tables, console and entryway tables, and custom desks. Each piece is a one-of-a-kind commission — if you have something specific in mind, ask.</p>
+      </div>
+
+      <div class="faq-item fade-up">
+        <div class="faq-divider"></div>
+        <p class="faq-question">How long does a commission take?</p>
+        <p class="faq-answer">Current lead time is 10–14 weeks from deposit to delivery. Timelines vary by complexity, slab availability, and finish selection. Jason will give you a project-specific estimate during your consultation.</p>
+      </div>
+
+      <div class="faq-item fade-up">
+        <div class="faq-divider"></div>
+        <p class="faq-question">What are the payment terms?</p>
+        <p class="faq-answer">A 50% deposit is required to secure your place in the build queue. The remaining balance is due prior to delivery or pickup. We accept check, bank transfer, and all major credit cards.</p>
+      </div>
+
+      <div class="faq-item fade-up">
+        <div class="faq-divider"></div>
+        <p class="faq-question">What does a piece typically cost?</p>
+        <p class="faq-answer">Dining tables start at $6,500 and coffee tables from $4,500, depending on slab selection, dimensions, and base design. River tables and highly figured slabs may be priced higher. Every quote is custom.</p>
+      </div>
+
+    </div>
   </section>
 
   <!-- ─── FOOTER ─── -->
