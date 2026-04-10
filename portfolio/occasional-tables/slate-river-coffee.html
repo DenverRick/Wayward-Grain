@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slate River Coffee Table — Wayward Grain</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #080706; --charcoal: #131110; --deep: #1c1917; --mid: #2c2825;
+      --stone: #5c544e; --ash: #9e968f; --linen: #e8e0d5; --cream: #f4f0ea;
+      --amber: #b87333; --amber-light: #d4956a; --river: #4a6b7a; --river-light: #7ca3b5;
+      --serif: 'Cormorant Garamond', Georgia, serif; --sans: 'Jost', system-ui, sans-serif; --nav-h: 72px;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--black); color: var(--linen); font-family: var(--sans); font-weight: 300; font-size: 16px; line-height: 1.7; overflow-x: hidden; }
+    img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    a { color: inherit; text-decoration: none; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: var(--nav-h); display: flex; align-items: center; justify-content: space-between; padding: 0 4vw; background: rgba(8,7,6,0.97); }
+    .nav-logo { font-family: var(--serif); font-size: 1.5rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cream); }
+    .nav-logo span { color: var(--amber); }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; }
+    .nav-links a { color: var(--ash); transition: color 0.25s; position: relative; }
+    .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; right: 100%; height: 1px; background: var(--amber); transition: right 0.3s ease; }
+    .nav-links a:hover { color: var(--cream); }
+    .nav-links a:hover::after, .nav-links a.active::after { right: 0; }
+    .nav-links a.active { color: var(--cream); }
+    .nav-cta { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; border: 1px solid var(--amber); color: var(--amber); padding: 0.55rem 1.4rem; transition: background 0.25s, color 0.25s; }
+    .nav-cta:hover { background: var(--amber); color: var(--black); }
+    .work-hero { margin-top: var(--nav-h); height: 70vh; min-height: 480px; background: var(--mid); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+    .work-hero-placeholder { font-family: var(--serif); font-size: 0.85rem; letter-spacing: 0.2em; color: var(--stone); text-transform: uppercase; text-align: center; }
+    .work-hero-placeholder small { display: block; font-size: 0.65rem; margin-top: 0.5rem; color: var(--mid); font-family: var(--sans); letter-spacing: 0.15em; }
+    .work-detail { display: grid; grid-template-columns: 1fr 1fr; gap: 8vw; padding: 5rem 6vw 7rem; background: var(--black); align-items: start; }
+    .breadcrumb { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--stone); margin-bottom: 2rem; display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
+    .breadcrumb a { color: var(--stone); transition: color 0.25s; }
+    .breadcrumb a:hover { color: var(--amber); }
+    .breadcrumb span { color: var(--mid); }
+    .work-series-label { font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--river-light); margin-bottom: 1rem; }
+    .work-title { font-family: var(--serif); font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 300; line-height: 1.1; color: var(--cream); margin-bottom: 2rem; }
+    .work-title em { font-style: italic; }
+    .work-description { color: var(--ash); font-size: 0.9rem; line-height: 1.9; margin-bottom: 2.5rem; }
+    .spec-table { width: 100%; border-collapse: collapse; margin-bottom: 3rem; }
+    .spec-table tr { border-bottom: 1px solid var(--mid); }
+    .spec-table td { padding: 0.75rem 0; font-size: 0.82rem; }
+    .spec-table td:first-child { color: var(--stone); letter-spacing: 0.12em; text-transform: uppercase; font-size: 0.7rem; width: 40%; }
+    .spec-table td:last-child { color: var(--linen); }
+    .cta-block { margin-top: 1rem; }
+    .btn-primary { display: inline-block; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; background: var(--amber); color: var(--black); padding: 1rem 2.5rem; transition: background 0.25s, transform 0.2s; font-weight: 400; }
+    .btn-primary:hover { background: var(--amber-light); transform: translateY(-1px); }
+    .cta-note { font-size: 0.72rem; color: var(--stone); margin-top: 1rem; font-style: italic; }
+    .work-images { display: flex; flex-direction: column; gap: 1.5px; }
+    .work-img-secondary { background: var(--mid); min-height: 280px; position: relative; display: flex; align-items: center; justify-content: center; }
+    .work-img-secondary::before { content: attr(data-label); font-family: var(--serif); font-size: 0.7rem; letter-spacing: 0.15em; color: var(--stone); text-transform: uppercase; }
+    footer { padding: 3rem 6vw; background: var(--charcoal); display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--mid); flex-wrap: wrap; gap: 1.5rem; }
+    .footer-logo { font-family: var(--serif); font-size: 1.3rem; font-weight: 300; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cream); }
+    .footer-logo span { color: var(--amber); }
+    .footer-location { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--stone); }
+    .footer-links { display: flex; gap: 2rem; list-style: none; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; }
+    .footer-links a { color: var(--stone); transition: color 0.25s; }
+    .footer-links a:hover { color: var(--amber); }
+    .footer-social { display: flex; gap: 1.5rem; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; }
+    .footer-social a { color: var(--stone); transition: color 0.25s; }
+    .footer-social a:hover { color: var(--river-light); }
+    .fade-up { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-up.visible { opacity: 1; transform: none; }
+    @media (max-width: 860px) { .nav-links { display: none; } .work-detail { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="../../waywardgrain-index.html" class="nav-logo">Wayward<span>&nbsp;·&nbsp;</span>Grain</a>
+    <ul class="nav-links">
+      <li><a href="../../waywardgrain-index.html#works" class="active">Portfolio</a></li>
+      <li><a href="../../waywardgrain-index.html#process">Process</a></li>
+      <li><a href="../../waywardgrain-index.html#inquiry">Commission</a></li>
+      <li><a href="../../waywardgrain-index.html#faq">FAQ</a></li>
+    </ul>
+    <a href="../../waywardgrain-index.html#inquiry" class="nav-cta">Begin a Commission</a>
+  </nav>
+
+  <div class="work-hero">
+    <div class="work-hero-placeholder">
+      Slate River Coffee Table
+      <small>Add hero photo here</small>
+    </div>
+  </div>
+
+  <div class="work-detail">
+
+    <div class="fade-up">
+      <div class="breadcrumb">
+        <a href="../../waywardgrain-index.html">Home</a>
+        <span>›</span>
+        <a href="../occasional-tables.html">Occasional Tables</a>
+        <span>›</span>
+        <span>Slate River Coffee Table</span>
+      </div>
+      <p class="work-series-label">River Series · Cherry</p>
+      <h1 class="work-title">Slate River<br><em>Coffee Table</em></h1>
+      <p class="work-description">
+        A cherry slab with a natural crack running the length of the piece, filled with a slate-toned epoxy river. The result is a coffee table that reads as a cross-section of the earth — warm cherry heartwood on either side, a cool mineral vein through the center. The brushed stainless base keeps it grounded without competing with the wood.
+      </p>
+
+      <table class="spec-table">
+        <tr><td>Wood</td><td>Cherry (single slab)</td></tr>
+        <tr><td>River Fill</td><td>Slate grey epoxy</td></tr>
+        <tr><td>Base</td><td>Brushed stainless steel</td></tr>
+        <tr><td>Dimensions</td><td>60" × 28" × 16"</td></tr>
+        <tr><td>Finish</td><td>Rubio Monocoat, pure</td></tr>
+        <tr><td>Status</td><td>Private collection, Denver CO</td></tr>
+      </table>
+
+      <div class="cta-block">
+        <a href="../../waywardgrain-index.html#inquiry" class="btn-primary">Commission a Similar Piece →</a>
+        <p class="cta-note">All pieces are one of a kind. Jason will work with you to find the right slab and design for your space.</p>
+      </div>
+    </div>
+
+    <div class="work-images fade-up">
+      <div class="work-img-secondary" data-label="Detail — Slate River Fill"></div>
+      <div class="work-img-secondary" data-label="Detail — Cherry Grain"></div>
+      <div class="work-img-secondary" data-label="Detail — Stainless Base"></div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-logo">Wayward<span>&nbsp;·&nbsp;</span>Grain</div>
+    <p class="footer-location">Denver, Colorado · Custom Commissions Only</p>
+    <ul class="footer-links">
+      <li><a href="../../waywardgrain-index.html#works">Portfolio</a></li>
+      <li><a href="../../waywardgrain-index.html#process">Process</a></li>
+      <li><a href="../../waywardgrain-index.html#inquiry">Commission</a></li>
+    </ul>
+    <div class="footer-social">
+      <a href="https://www.instagram.com/waywardgrain/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

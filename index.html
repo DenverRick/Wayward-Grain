@@ -318,6 +318,22 @@
       margin-bottom: 4rem;
     }
     .works-header .btn-ghost { color: var(--ash); }
+    .works-subtitle {
+      font-size: 0.88rem;
+      color: var(--ash);
+      margin-top: 0.75rem;
+      line-height: 1.7;
+    }
+    .work-cue {
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-top: 0.6rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .work-card:hover .work-cue { opacity: 1; }
 
     .works-grid {
       display: grid;
@@ -673,7 +689,6 @@
     <ul class="nav-links">
       <li><a href="#works">Portfolio</a></li>
       <li><a href="#process">Process</a></li>
-      <li><a href="#materials">Materials</a></li>
       <li><a href="#inquiry">Commission</a></li>
       <li><a href="#faq">FAQ</a></li>
     </ul>
@@ -755,49 +770,48 @@
       <div>
         <p class="section-label">Selected Works</p>
         <h2 class="section-title">Recent <em>Commissions</em></h2>
+        <p class="works-subtitle">Previously commissioned work in private collections around the world:</p>
       </div>
-      <a href="#inquiry" class="btn-ghost">All available pieces →</a>
+      <a href="portfolio/dining-tables.html" class="btn-ghost">View all collections →</a>
     </div>
 
     <div class="works-grid">
 
-      <!-- Card 1 — TALL FEATURED -->
-      <div class="work-card fade-up">
-        <!--
-          PHOTO SWAP: Add Jason's best river table photo
-          <img src="img/platte-river.jpg" alt="Platte River Dining Table"
-               class="work-photo">
-        -->
-        <div class="work-img-placeholder" data-label="Hero Photo — River Dining Table"></div>
+      <!-- Card 1 — Dining Tables -->
+      <a href="portfolio/dining-tables.html" class="work-card fade-up">
+        <div class="work-img-placeholder" data-label="Dining Tables Photo"></div>
         <div class="work-overlay"></div>
         <div class="work-info">
-          <p class="work-series">River Series · Walnut</p>
-          <h3 class="work-name">The Platte River<br>Dining Table</h3>
-          <p class="work-spec">Highly figured walnut · Smoky glass river · Bronze hammered base · 9 ft</p>
+          <p class="work-series">Custom Commissions</p>
+          <h3 class="work-name">Dining<br>Tables</h3>
+          <p class="work-spec">River tables · Bookend slabs · Live edge · Custom bases</p>
+          <p class="work-cue">View Collection →</p>
         </div>
-      </div>
+      </a>
 
-      <!-- Card 2 -->
-      <div class="work-card fade-up">
-        <div class="work-img-placeholder" data-label="Bookend Dining Table Photo"></div>
+      <!-- Card 2 — Occasional Tables -->
+      <a href="portfolio/occasional-tables.html" class="work-card fade-up">
+        <div class="work-img-placeholder" data-label="Occasional Tables Photo"></div>
         <div class="work-overlay"></div>
         <div class="work-info">
-          <p class="work-series">Bookend Series · Maple</p>
-          <h3 class="work-name">Boulder Creek<br>Dining Table</h3>
-          <p class="work-spec">Maple burl · Matte black steel base</p>
+          <p class="work-series">Custom Commissions</p>
+          <h3 class="work-name">Occasional<br>Tables</h3>
+          <p class="work-spec">Coffee tables · Consoles · Benches · Desks</p>
+          <p class="work-cue">View Collection →</p>
         </div>
-      </div>
+      </a>
 
-      <!-- Card 3 -->
-      <div class="work-card fade-up">
-        <div class="work-img-placeholder" data-label="Coffee Table Photo"></div>
+      <!-- Card 3 — Artwork -->
+      <a href="portfolio/artwork.html" class="work-card fade-up">
+        <div class="work-img-placeholder" data-label="Artwork Photo"></div>
         <div class="work-overlay"></div>
         <div class="work-info">
-          <p class="work-series">River Series · Cherry</p>
-          <h3 class="work-name">Slate River<br>Coffee Table</h3>
-          <p class="work-spec">Cherry slab · Brushed stainless base</p>
+          <p class="work-series">Original Works</p>
+          <h3 class="work-name">Artwork</h3>
+          <p class="work-spec">Wall pieces · Sculptural forms · One-of-a-kind originals</p>
+          <p class="work-cue">View Collection →</p>
         </div>
-      </div>
+      </a>
 
     </div>
   </section>
